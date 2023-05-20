@@ -1,0 +1,43 @@
+services:
+
+  db:
+    image: postgres:15.0-alpine
+    restart: always
+    volumes:
+      - tree_menu_postgres_data:/var/lib/postgresql/data/
+    environment:
+      - POSTGRES_PASSWORD=12345
+    env_file:
+      - ../../.env
+
+  web:
+    build: ../..
+    restart: always
+    depends_on: 
+      - db
+    volumes:  
+      - tree_menu_static_value:/app/static/      
+    environment:
+      - DB_ENGINE=django.db.backends.postgresql
+      - DB_NAME=postgres
+      - DB_HOST=db
+      - DB_PORT=5432
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=12345          
+    env_file:
+      - ../../.env     
+  
+  nginx:
+    image: nginx:1.21.3-alpine
+    restart: always
+    depends_on:
+      - web    
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf
+      - tree_menu_static_value:/var/html/static/
+
+volumes:
+  tree_menu_postgres_data:   
+  tree_menu_static_value: 
