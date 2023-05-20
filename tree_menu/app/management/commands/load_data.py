@@ -1,7 +1,7 @@
+from app.models import MenuItem
 from django.core.management import BaseCommand
 
-from app.models import MenuItem
-from . utils import info
+from .utils import info
 
 
 class Command(BaseCommand):
