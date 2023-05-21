@@ -5,8 +5,6 @@ services:
     restart: always
     volumes:
       - tree_menu_postgres_data:/var/lib/postgresql/data/
-    environment:
-      - POSTGRES_PASSWORD=12345
     env_file:
       - ../../.env
 
@@ -16,14 +14,7 @@ services:
     depends_on: 
       - db
     volumes:  
-      - tree_menu_static_value:/app/static/      
-    environment:
-      - DB_ENGINE=django.db.backends.postgresql
-      - DB_NAME=postgres
-      - DB_HOST=db
-      - DB_PORT=5432
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=12345          
+      - tree_menu_static_value:/app/static/             
     env_file:
       - ../../.env     
   

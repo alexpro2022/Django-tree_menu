@@ -84,8 +84,8 @@ git config --global core.autocrlf false
 
 1. Клонируйте репозиторий с GitHub и введите данные для переменных окружения (значения даны для примера, но их можно оставить):
 ```
-git clone git@github.com:alexpro2022/menu-tree.git && \
-cd menu-tree && \
+git clone git@github.com:alexpro2022/tree-menu.git && \
+cd tree-menu && \
 cp env_example .env && \
 nano .env
 ```
