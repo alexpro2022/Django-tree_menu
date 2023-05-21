@@ -1,0 +1,11 @@
+{% load custom_tags %}
+
+{% if menus %}
+    <ul>
+        {% for menu in menus%}
+            <li><a href='{{ menu }}'>{{ menu }}</li>
+        {% endfor %}
+    </ul>    
+{% elif menu_name %}
+    {% draw_menu menu_name menu_item %}
+{% endif %}

@@ -1,24 +1,50 @@
-from app.models import MenuItem
+import random
+from string import ascii_letters, digits
+
 from django.core.management import BaseCommand
 
+from app.models import Menu, MenuItem
 from .utils import info
+
+ALPHABET = ascii_letters + digits
 
 
 class Command(BaseCommand):
-    _class = MenuItem
+    _class = Menu
     name = 'MENU'
+    menu_size: int = 4
+    menu_depth: int = 4
+
+    def __create_menu_items(
+        self,
+        level_name: str,
+        menu: Menu,
+        parent: MenuItem = None,
+        depth: int = 0,
+    ) -> None:
+        if depth >= self.menu_depth:
+            return
+        for i in range(self.menu_size):
+            unique_id = ''.join(random.choice(ALPHABET) for i in range(4))
+            menu_item_name = (
+                f'{level_name}: level-{depth+1} item-{i+1} {unique_id}')
+            menu_item = MenuItem.objects.create(
+                name=menu_item_name,
+                menu=menu,
+                parent=parent,
+            )
+            self.__create_menu_items(level_name, menu, menu_item, depth + 1)
+
+    def __create_menu(self, menu_name: str) -> None:
+        menu = Menu.objects.create(name=menu_name)
+        self.__create_menu_items(level_name=menu.name, menu=menu)
 
     @info
     def handle(self, *args, **kwargs):
-        size = 5
-        for i in range(size):
-            level = f'level-{i+1}'
-            main_menu = self._class.objects.create(name=level)
-            for j in range(size):
-                sublevel = f'{level} sublevel-{j+1}'
-                submenu = self._class.objects.create(
-                    name=sublevel, parent=main_menu)
-                for k in range(size):
-                    subsublevel = f'{sublevel} sub-sublevel-{k+1}\n'
-                    self._class.objects.create(
-                        name=subsublevel, parent=submenu)
+        for menu_name in (
+            'first menu',
+            'second menu',
+            'third menu',
+            'forth menu',
+        ):
+            self.__create_menu(menu_name)
