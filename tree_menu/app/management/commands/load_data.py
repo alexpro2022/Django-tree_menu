@@ -1,9 +1,9 @@
 import random
 from string import ascii_letters, digits
 
+from app.models import Menu, MenuItem
 from django.core.management import BaseCommand
 
-from app.models import Menu, MenuItem
 from .utils import info
 
 ALPHABET = ascii_letters + digits

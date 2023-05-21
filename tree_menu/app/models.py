@@ -8,7 +8,7 @@ class Menu(models.Model):
         'Описание', max_length=300, blank=True)
 
     class Meta:
-        ordering = ['name']
+        ordering = ['id']
         verbose_name = 'Меню'
         verbose_name_plural = 'Меню'
 

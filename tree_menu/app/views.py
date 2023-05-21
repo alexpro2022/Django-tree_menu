@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-from app.models import Menu
+from .models import Menu
 
 
 def index(request):
