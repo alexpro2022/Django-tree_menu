@@ -18,8 +18,7 @@
 
 **Языки программирования, библиотеки и модули:**
 
-[![Python](https://img.shields.io/badge/python-3.7%20%7C%203.8%20%7C%203.9%20%7C%203.10%20%7C%203.11-blue?logo=python)](https://www.python.org/)
-
+[![Python](https://img.shields.io/badge/Python-v3.10-blue?logo=python)](https://www.python.org/)
 
 **Фреймворк, расширения и библиотеки:**
 
@@ -32,12 +31,12 @@
 [![PostgreSQL](https://img.shields.io/badge/-PostgreSQL-464646?logo=PostgreSQL)](https://www.postgresql.org/)
 
 
-**Тестирование:**
+<!--**Тестирование:**
 
 [![Pytest](https://img.shields.io/badge/-Pytest-464646?logo=Pytest)](https://docs.pytest.org/en/latest/)
 [![Pytest-cov](https://img.shields.io/badge/-Pytest--cov-464646?logo=Pytest)](https://pytest-cov.readthedocs.io/en/latest/)
 [![Coverage](https://img.shields.io/badge/-Coverage-464646?logo=Python)](https://coverage.readthedocs.io/en/latest/)
-
+-->
 
 **CI/CD:**
 
