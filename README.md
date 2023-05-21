@@ -172,8 +172,8 @@ TELEGRAM_BOT_TOKEN
   - БД заполнена начальными данными
   - собрана статика
   - создан суперюзер (пользователь с правами админа) с учетными данными:
-      - Django: username = 'adm', password = 'adm' - значения можно изменить в `tree_menu\app\management\commands\create_superuser.py`
-      - Docker Compose - из переменных окружения ADMIN_USERNAME, ADMIN_EMAIL, ADMIN_PASSWORD
+      - для Django: username = 'adm', password = 'adm' - значения можно изменить в `tree_menu\app\management\commands\create_superuser.py`
+      - для Docker Compose - из переменных окружения ADMIN_USERNAME, ADMIN_EMAIL, ADMIN_PASSWORD
       
  
 
