@@ -118,7 +118,7 @@ python tree_menu/manage.py runserver
 5. Остановить приложение можно комбинацией клавиш Ctl-C.
 </details>
 
-<details><summary>Локальный запуск: Docker Compose</summary>
+<details><summary>Локальный запуск: Docker Compose/PostgreSQL</summary>
 
 2. Из корневой директории проекта выполните команду:
 ```
