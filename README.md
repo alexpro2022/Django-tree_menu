@@ -18,7 +18,7 @@
 
 **Языки программирования, библиотеки и модули:**
 
-[![Python](https://img.shields.io/badge/Python-v3.10-blue?logo=python)](https://www.python.org/)
+[![Python](https://img.shields.io/badge/Python-3.10%20%7C%203.11-blue?logo=python)](https://www.python.org/)
 
 **Фреймворк, расширения и библиотеки:**
 
