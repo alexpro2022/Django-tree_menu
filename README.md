@@ -1,6 +1,7 @@
 # Проект tree-menu: 
 [![Tree-menu CI/CD](https://github.com/alexpro2022/menu-tree/actions/workflows/main.yml/badge.svg)](https://github.com/alexpro2022/menu-tree/actions/workflows/main.yml)
 [![codecov](https://codecov.io/gh/alexpro2022/<REPOSITIRY_NAME>/branch/master/graph/badge.svg?token=1ETL9DOJEB)](https://codecov.io/gh/alexpro2022/<REPOSITIRY_NAME>)
+[![Visits Badge](https://badges.pufler.dev/visits/pujux/badge-it)](https://badges.pufler.dev)
 
 
 
