@@ -3,6 +3,7 @@ from string import ascii_letters, digits
 
 from app.models import Menu, MenuItem
 from django.core.management import BaseCommand
+from django.db import IntegrityError
 
 from .utils import info
 
@@ -23,6 +24,20 @@ class Command(BaseCommand):
         depth: int = 0,
     ) -> None:
         if depth >= self.menu_depth:
+            try:
+                menu_item = MenuItem.objects.create(
+                    name='Menu item',
+                    menu=menu,
+                    parent=parent,
+                )
+                MenuItem.objects.create(
+                    name='Пункт меню со ссылкой на ресурс',
+                    menu=menu,
+                    parent=menu_item,
+                    url='https://spb.hh.ru/employer/2365329',
+                )
+            except IntegrityError:
+                pass
             return
         for i in range(self.menu_size):
             unique_id = ''.join(random.choice(ALPHABET) for i in range(4))
