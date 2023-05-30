@@ -101,7 +101,7 @@ python tree_menu/manage.py load_data && \
 python tree_menu/manage.py create_superuser && \
 python tree_menu/manage.py runserver
 ```
-Сервер запустится локально по адресу http://127.0.0.1:8000/
+Сервер запустится локально по адресу `http://127.0.0.1:8000/`
 
 5. Остановить приложение можно комбинацией клавиш Ctl-C.
 <hr></details>
@@ -112,7 +112,7 @@ python tree_menu/manage.py runserver
 ```
 docker compose -f infra/local/docker-compose.yml up -d --build
 ```
-Проект будет развернут в трех docker-контейнерах (db, web, nginx) по адресу http://localhost.
+Проект будет развернут в трех docker-контейнерах (db, web, nginx) по адресу `http://localhost`.
 
 3. Остановить docker и удалить контейнеры можно командой из корневой директории проекта:
 ```
