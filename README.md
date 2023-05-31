@@ -1,5 +1,5 @@
 # Проект tree-menu: 
-[![Tree-menu CI/CD](https://github.com/alexpro2022/menu-tree/actions/workflows/main.yml/badge.svg)](https://github.com/alexpro2022/menu-tree/actions/workflows/main.yml)
+[![Tree-menu CI/CD](https://github.com/alexpro2022/Django-tree_menu/actions/workflows/main.yml/badge.svg)](https://github.com/alexpro2022/Django-tree_menu/actions/workflows/main.yml)
 
 Тестовое задание -  создать древовидное меню на Django.
 
