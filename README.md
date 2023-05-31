@@ -1,7 +1,7 @@
 # Проект tree-menu: 
 [![Tree-menu CI/CD](https://github.com/alexpro2022/Django-tree_menu/actions/workflows/main.yml/badge.svg)](https://github.com/alexpro2022/Django-tree_menu/actions/workflows/main.yml)
 
-Тестовое задание -  создать древовидное меню на Django.
+Тестовое задание -  создать древовидное меню на Django, испоьзуя custom template tag.
 
 Ссылка на тестовое задание: 
 https://docs.google.com/document/d/1XTnbcXhejyGB-I2cHRiiSZqI3ElHzqDJeetwHkJbTa8/edit?usp=sharing 
