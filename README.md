@@ -1,6 +1,5 @@
 # Проект tree-menu: 
 [![Tree-menu CI/CD](https://github.com/alexpro2022/menu-tree/actions/workflows/main.yml/badge.svg)](https://github.com/alexpro2022/menu-tree/actions/workflows/main.yml)
-[![codecov](https://codecov.io/gh/alexpro2022/<REPOSITIRY_NAME>/branch/master/graph/badge.svg?token=1ETL9DOJEB)](https://codecov.io/gh/alexpro2022/<REPOSITIRY_NAME>)
 
 
 
@@ -56,7 +55,7 @@
 Предполагается, что пользователь:
  - создал аккаунт [DockerHub](https://hub.docker.com/), если запуск будет производиться на удаленном сервере.
  - установил [Docker](https://docs.docker.com/engine/install/) и [Docker Compose](https://docs.docker.com/compose/install/) на локальной машине или на удаленном сервере, где проект будет запускаться в контейнерах. Проверить наличие можно выполнив команды:
-    ```
+    ```bash
     docker --version && docker-compose --version
     ```
 </details>
@@ -64,13 +63,13 @@
 <details><summary>Локальный запуск</summary> 
 
 **!!! Для пользователей Windows обязательно выполнить команду:** 
-```
+```bash
 git config --global core.autocrlf false
 ```
 иначе файл start.sh при клонировании будет бракован.
 
 1. Клонируйте репозиторий с GitHub и введите данные для переменных окружения (значения даны для примера, но их можно оставить):
-```
+```bash
 git clone https://github.com/alexpro2022/tree-menu.git && \
 cd tree-menu && \
 cp env_example .env && \
@@ -80,21 +79,21 @@ nano .env
 
 2. Создайте и активируйте виртуальное окружение:
    * Если у вас Linux/macOS
-   ```
+   ```bash
     python -m venv venv && source venv/bin/activate
    ```
    * Если у вас Windows
-   ```
+   ```bash
     python -m venv venv && source venv/Scripts/activate
    ```
 
 3. Установите в виртуальное окружение все необходимые зависимости из файла **requirements.txt**:
-```
+```bash
 python -m pip install --upgrade pip && pip install -r requirements.txt
 ```
 
 4. Выполните миграции, загрузку данных, создание суперюзера и запустите приложение:
-```
+```bash
 python tree_menu/manage.py makemigrations && \
 python tree_menu/manage.py migrate && \
 python tree_menu/manage.py load_data && \
@@ -109,17 +108,17 @@ python tree_menu/manage.py runserver
 <details><summary>Локальный запуск: Docker Compose/PostgreSQL</summary>
 
 2. Из корневой директории проекта выполните команду:
-```
+```bash
 docker compose -f infra/local/docker-compose.yml up -d --build
 ```
 Проект будет развернут в трех docker-контейнерах (db, web, nginx) по адресу `http://localhost`.
 
 3. Остановить docker и удалить контейнеры можно командой из корневой директории проекта:
-```
+```bash
 docker compose -f infra/local/docker-compose.yml down
 ```
 Если также необходимо удалить тома базы данных, статики и медиа:
-```
+```bash
 docker compose -f infra/local/docker-compose.yml down -v
 ```
 </details><hr></details>
@@ -128,8 +127,8 @@ docker compose -f infra/local/docker-compose.yml down -v
 
 1. Сделайте [форк](https://docs.github.com/en/get-started/quickstart/fork-a-repo) в свой репозиторий.
 
-2. Создайте Actions.Secrets согласно списку ниже (значения указаны для примера) + переменные окружения из env_example файла:
-```
+2. Создайте `Actions.Secrets` согласно списку ниже (значения указаны для примера) + переменные окружения из env_example файла:
+```py
 PROJECT_NAME
 SECRET_KEY
 
@@ -152,7 +151,7 @@ TELEGRAM_USER_ID
 TELEGRAM_BOT_TOKEN
 ```
 
-3. Запустите вручную workflow, чтобы автоматически развернуть проект в трех docker-контейнерах (db, web, nginx) на удаленном сервере.
+3. Запустите вручную `workflow`, чтобы автоматически развернуть проект в трех docker-контейнерах (db, web, nginx) на удаленном сервере.
 </details><hr>
 
 При первом запуске будут автоматически произведены следующие действия:
@@ -161,19 +160,19 @@ TELEGRAM_BOT_TOKEN
   - собрана статика
   - создан суперюзер (пользователь с правами админа) с учетными данными:
       - для Django: username = 'adm', password = 'adm' - значения можно изменить в `tree_menu\app\management\commands\create_superuser.py`
-      - для Docker Compose - из переменных окружения ADMIN_USERNAME, ADMIN_EMAIL, ADMIN_PASSWORD
+      - для Docker Compose - из переменных окружения `ADMIN_USERNAME`, `ADMIN_EMAIL`, `ADMIN_PASSWORD`
       
  
 
 Меню представлены по адресу (в зависимости от способа запуска):
   - http://127.0.0.1:8000/menu/
   - http://localhost/menu/
-  - http://<IP-адрес удаленного сервера>/menu/
+  - `http://<IP-адрес удаленного сервера>/menu/`
 
 Вход в админ-зону осуществляется по адресу (в зависимости от способа запуска):
   - http://127.0.0.1:8000/admin/
   - http://localhost/admin/
-  - http://<IP-адрес удаленного сервера>/admin/
+  - `http://<IP-адрес удаленного сервера>/admin/`
 
 [⬆️Оглавление](#оглавление)
 
@@ -196,7 +195,7 @@ TELEGRAM_BOT_TOKEN
 
 ## Удаление:
 Для удаления проекта выполните следующие действия:
-```
+```bash
 cd .. && rm -fr tree-menu && deactivate
 ```
   
