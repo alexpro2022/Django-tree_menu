@@ -74,8 +74,8 @@ git config --global core.autocrlf false
 
 1. Клонируйте репозиторий с GitHub и введите данные для переменных окружения (значения даны для примера, но их можно оставить):
 ```bash
-git clone https://github.com/alexpro2022/tree-menu.git && \
-cd tree-menu && \
+git clone https://github.com/alexpro2022/Django-tree_menu.git && \
+cd Django-tree_menu && \
 cp env_example .env && \
 nano .env
 ```
@@ -200,7 +200,7 @@ TELEGRAM_BOT_TOKEN
 ## Удаление:
 Для удаления проекта выполните следующие действия:
 ```bash
-cd .. && rm -fr tree-menu && deactivate
+cd .. && rm -fr Django-tree_menu && deactivate
 ```
   
 [⬆️Оглавление](#оглавление)
