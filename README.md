@@ -1,11 +1,11 @@
 # Проект tree-menu: 
 [![Tree-menu CI/CD](https://github.com/alexpro2022/Django-tree_menu/actions/workflows/main.yml/badge.svg)](https://github.com/alexpro2022/Django-tree_menu/actions/workflows/main.yml)
 
-Тестовое задание -  создать древовидное меню на Django, испоьзуя custom template tag.
+### Древовидное меню на Django, испоьзуя custom template tag.
 
-Ссылка на тестовое задание: 
-https://docs.google.com/document/d/1XTnbcXhejyGB-I2cHRiiSZqI3ElHzqDJeetwHkJbTa8/edit?usp=sharing 
+[Тестовое задание](https://docs.google.com/document/d/1XTnbcXhejyGB-I2cHRiiSZqI3ElHzqDJeetwHkJbTa8/edit?usp=sharing)
 
+<br>
 
 ## Оглавление:
 - [Технологии](#технологии)
@@ -14,11 +14,11 @@ https://docs.google.com/document/d/1XTnbcXhejyGB-I2cHRiiSZqI3ElHzqDJeetwHkJbTa8/
 - [Удаление](#удаление)
 - [Автор](#автор)
 
-
+<br>
 
 ## Технологии:
 
-<details><summary>Развернуть</summary>
+<details><summary>Подробнее</summary>
 
 **Языки программирования, библиотеки и модули:**
 
@@ -49,12 +49,12 @@ https://docs.google.com/document/d/1XTnbcXhejyGB-I2cHRiiSZqI3ElHzqDJeetwHkJbTa8/
 [⬆️Оглавление](#оглавление)
 </details>
 
-
+<br>
 
 ## Установка и запуск:
 Удобно использовать принцип copy-paste - копировать команды из GitHub Readme и вставлять в командную строку Git Bash или IDE (например VSCode).
-### Предварительные условия для Docker Compose:
-<details><summary>Развернуть</summary>
+
+<details><summary>Предварительные условия</summary>
 
 Предполагается, что пользователь:
  - создал аккаунт [DockerHub](https://hub.docker.com/), если запуск будет производиться на удаленном сервере.
@@ -62,8 +62,9 @@ https://docs.google.com/document/d/1XTnbcXhejyGB-I2cHRiiSZqI3ElHzqDJeetwHkJbTa8/
     ```bash
     docker --version && docker-compose --version
     ```
+<h1></h1>
 </details>
-<hr>
+
 <details><summary>Локальный запуск</summary> 
 
 **!!! Для пользователей Windows обязательно выполнить команду:** 
@@ -107,7 +108,8 @@ python tree_menu/manage.py runserver
 Сервер запустится локально по адресу `http://127.0.0.1:8000/`
 
 5. Остановить приложение можно комбинацией клавиш Ctl-C.
-<hr></details>
+<h1></h1>
+ </details>
 
 <details><summary>Локальный запуск: Docker Compose/PostgreSQL</summary>
 
@@ -125,7 +127,7 @@ docker compose -f infra/local/docker-compose.yml down
 ```bash
 docker compose -f infra/local/docker-compose.yml down -v
 ```
-</details><hr></details>
+</details><h1></h1></details>
 
 <details><summary>Запуск на удаленном сервере</summary>
 
@@ -156,7 +158,7 @@ TELEGRAM_BOT_TOKEN
 ```
 
 3. Запустите вручную `workflow`, чтобы автоматически развернуть проект в трех docker-контейнерах (db, web, nginx) на удаленном сервере.
-</details><hr>
+</details><h1></h1>
 
 При первом запуске будут автоматически произведены следующие действия:
   - выполнены миграции БД
@@ -180,7 +182,7 @@ TELEGRAM_BOT_TOKEN
 
 [⬆️Оглавление](#оглавление)
 
-
+<br>
 
 ## Описание работы:
 
@@ -196,6 +198,7 @@ TELEGRAM_BOT_TOKEN
 
 [⬆️Оглавление](#оглавление)
 
+<br>
 
 ## Удаление:
 Для удаления проекта выполните следующие действия:
@@ -205,7 +208,7 @@ cd .. && rm -fr Django-tree_menu && deactivate
   
 [⬆️Оглавление](#оглавление)
 
-
+<br>
 
 ## Автор:
 [Aleksei Proskuriakov](https://github.com/alexpro2022)
